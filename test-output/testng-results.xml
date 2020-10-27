@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1899" started-at="2020-10-21T15:43:58 COT" finished-at="2020-10-21T15:44:00 COT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1899" started-at="2020-10-21T15:43:58 COT" finished-at="2020-10-21T15:44:00 COT">
+      <class name="tracingAPI.test01">
+        <test-method status="PASS" signature="test01GET()[pri:0, instance:tracingAPI.test01@2d6eabae]" name="test01GET" duration-ms="1863" started-at="2020-10-21T15:43:58 COT" finished-at="2020-10-21T15:44:00 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01GET -->
+      </class> <!-- tracingAPI.test01 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
