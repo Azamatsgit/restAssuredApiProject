@@ -15,15 +15,16 @@ import com.opencsv.CSVReaderBuilder;
 public class Utils {
 	
 	public static Logger logger = Logger.getLogger("tracingAPI");
-	public static final String propertiesFolder="./properties";
-	public static final String csvData="./dataCSV";
+	public static final String propertiesFolder="src/test/resources/properties";
+	public static final String csvData="./data";
 	
 	public static Properties loadProperties(String configFile) {
 		Properties mainProperties = new Properties();
 
 	    FileInputStream file;
 	    try {
-			file = new FileInputStream(propertiesFolder+"/"+configFile);
+	    	file = new FileInputStream(propertiesFolder+"/"+configFile);
+			//file = new FileInputStream(propertiesFolder+"/"+configFile);
 			mainProperties.load(file);
 		    file.close();
 		} catch (Exception e1) {

@@ -6,23 +6,23 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import config.marlinDBConnection;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import marlinSQL.marlinDBConnection;
 
-public class test01 extends testData {
+public class tracingAPIpostTest extends testData {
 	
 	
 	@Test
-	void test01GET() {
+	void TestGetResponse() {
 		Response response= RestAssured.get(uri+postMethod);
 		Assert.assertEquals(response.getStatusCode(), 405);
 	}
 	
 	@SuppressWarnings("unchecked")
 	@Test(dataProvider = "tracingAPIData")
-	void test02POST(String clientId,String clientCode,String filename,String totalRecords,String totalRecordsUpdated,String totalRecordsAdded,
+	void TestPostExecutionAndResponse(String clientId,String clientCode,String filename,String totalRecords,String totalRecordsUpdated,String totalRecordsAdded,
 			String totalRecordsRemoved,String conflictingFunds,String s3FileSourceLocations,String createdBy,String uploadMethod,
 			String status,String duplicateFunds,String missingIdentifierFunds,String invalidProductIdentifierFunds,String modifiedBy,String traceId){
 		

@@ -5,7 +5,7 @@
     <classes>
       <class name="tracingAPI.test01">
         <methods>
-          <include name="test03DBChecking" invocation-numbers="0"/>
+          <include name="test01GET"/>
         </methods>
       </class> <!-- tracingAPI.test01 -->
     </classes>
