@@ -1,4 +1,4 @@
-package utils;
+package com.morningstar.trackingservice.utils;
 
 import java.io.FileInputStream;
 import java.io.FileReader;
@@ -16,7 +16,7 @@ public class Utils {
 	
 	public static Logger logger = Logger.getLogger("tracingAPI");
 	public static final String propertiesFolder="src/test/resources/properties";
-	public static final String csvData="./data";
+	public static final String csvData="src/test/resources/data";
 	
 	public static Properties loadProperties(String configFile) {
 		Properties mainProperties = new Properties();

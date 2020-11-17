@@ -1,4 +1,4 @@
-package tracingAPI;
+package com.morningstar.trackingservice.integrationTests.tracingAPI;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,9 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import config.marlinDBConnection;
+import com.morningstar.trackingservice.config.marlinDBConnection;
+import com.morningstar.trackingservice.integrationTests.testData;
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;

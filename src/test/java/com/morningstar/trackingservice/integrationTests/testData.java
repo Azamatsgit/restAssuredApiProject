@@ -1,19 +1,19 @@
-package tracingAPI;
+package com.morningstar.trackingservice.integrationTests;
 
 import java.util.Properties;
 import java.util.UUID;
 
 import org.testng.annotations.DataProvider;
 
-import utils.Utils;
+import com.morningstar.trackingservice.utils.Utils;
 
 public class testData {
 	Properties testData=Utils.loadProperties("tracingAPIPost.properties");;
 	
-	String uri=testData.getProperty("uri");
-	String postMethod=testData.getProperty("postMethod");
+	protected String uri=testData.getProperty("uriUAT");
+	protected String postMethod=testData.getProperty("postMethod");
 	
-	String tracingFundUniverseQuery=testData.getProperty("tracingFundUniverseQuery");
+	protected String tracingFundUniverseQuery=testData.getProperty("tracingFundUniverseQuery");
 	
 	@DataProvider(name ="tracingAPIData")
 	public Object[][] tracingAPI(){		
@@ -24,4 +24,6 @@ public class testData {
 		}
 		return tracingData;
 	}
+	
+	
 }

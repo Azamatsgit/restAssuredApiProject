@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1621" started-at="2020-11-05T11:06:47 COT" finished-at="2020-11-05T11:06:49 COT">
+  <suite name="Default suite" duration-ms="1585" started-at="2020-11-17T12:28:49 COT" finished-at="2020-11-17T12:28:51 COT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1621" started-at="2020-11-05T11:06:47 COT" finished-at="2020-11-05T11:06:49 COT">
-      <class name="tracingAPI.test01">
-        <test-method status="PASS" signature="test01GET()[pri:0, instance:tracingAPI.test01@d44fc21]" name="test01GET" duration-ms="1592" started-at="2020-11-05T11:06:47 COT" finished-at="2020-11-05T11:06:49 COT">
+    <test name="Default test" duration-ms="1585" started-at="2020-11-17T12:28:49 COT" finished-at="2020-11-17T12:28:51 COT">
+      <class name="com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest">
+        <test-method status="PASS" signature="TestGetResponse()[pri:0, instance:com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest@d44fc21]" name="TestGetResponse" duration-ms="1553" started-at="2020-11-17T12:28:49 COT" finished-at="2020-11-17T12:28:51 COT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test01GET -->
-      </class> <!-- tracingAPI.test01 -->
+        </test-method> <!-- TestGetResponse -->
+      </class> <!-- com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

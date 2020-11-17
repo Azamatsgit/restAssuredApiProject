@@ -1,4 +1,4 @@
-package config;
+package com.morningstar.trackingservice.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Properties;
 
-import utils.Utils;
+import com.morningstar.trackingservice.utils.Utils;
+
 
 public class marlinDBConnection {
 	
