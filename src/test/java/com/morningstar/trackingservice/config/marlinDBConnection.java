@@ -20,10 +20,21 @@ public class marlinDBConnection {
 	String password;
 	
 	public marlinDBConnection() {
-		 dbConnection=Utils.loadProperties("DBConnection.properties");
+		dbConnection=Utils.loadProperties("DBConnection.properties");
+	}
+	
+	public void setQA() {
+		
 		 url = dbConnection.getProperty("url");
 		 user=dbConnection.getProperty("user");
 		 password=dbConnection.getProperty("password");
+	}
+	
+	public void setUAT() {
+		
+		 url = dbConnection.getProperty("urlUAT");
+		 user=dbConnection.getProperty("userUAT");
+		 password=dbConnection.getProperty("passwordUAT");
 	}
 	
 	public ArrayList<String> query(String query) {

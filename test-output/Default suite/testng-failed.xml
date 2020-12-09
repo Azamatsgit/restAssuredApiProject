@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="integrationTests.tracingAPI.tracingAPIpostTest">
+      <class name="com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest">
         <methods>
-          <include name="TestPostExecutionAndResponse" invocation-numbers="0 1"/>
+          <include name="test03DBChecking" invocation-numbers="1"/>
         </methods>
-      </class> <!-- integrationTests.tracingAPI.tracingAPIpostTest -->
+      </class> <!-- com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

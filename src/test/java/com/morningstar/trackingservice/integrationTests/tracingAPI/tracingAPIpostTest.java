@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.json.simple.JSONObject;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.morningstar.trackingservice.config.marlinDBConnection;
@@ -14,13 +15,29 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class tracingAPIpostTest extends testData {
-	
-	
+	public String environment;
+	public String scope;
+	@Parameters({"environment","scope"})
 	@Test
-	void TestGetResponse() {
-		Response response= RestAssured.get(uri+postMethod);
+	void TestGetResponse(String param,String scope) {
+		environment=param;
+		this.scope=scope;
+		Response response = null;
+		if(environment.equals("QA")) {
+			 response= RestAssured.get(uriQA+postMethod);
+			 System.out.println(scope);
+		}else if(environment.equals("UAT")) {
+			 response= RestAssured.get(uriUAT+postMethod);
+		}else if(environment.equals("PROD")) {
+			
+		}else {
+			System.err.println("Not a valid environment");
+		}
+		
 		Assert.assertEquals(response.getStatusCode(), 405);
 	}
+	
+	
 	
 	@SuppressWarnings("unchecked")
 	@Test(dataProvider = "tracingAPIData")
@@ -45,8 +62,16 @@ public class tracingAPIpostTest extends testData {
 		request.put("missingIdentifierFunds", missingIdentifierFunds);
 		request.put("invalidProductIdentifierFunds", invalidProductIdentifierFunds);
 		request.put("modifiedBy", modifiedBy);
+		if(environment.equals("QA")) {
+			RestAssured.baseURI=uriQA;
+		}else if(environment.equals("UAT")) {
+			RestAssured.baseURI=uriUAT;
+		}else if(environment.equals("PROD")) {
+			
+		}else {
+			System.err.println("Not a valid environment");
+		}
 		
-		RestAssured.baseURI=uri;
 		RequestSpecification requestPOST = RestAssured.given();
 		
 		requestPOST.header("X-B3-TraceId",traceId);
@@ -54,7 +79,7 @@ public class tracingAPIpostTest extends testData {
 		requestPOST.body(request.toJSONString());
 		Response response = requestPOST.post(postMethod);
 		Assert.assertEquals(response.getStatusCode(), 200);
-		Assert.assertEquals(response.getBody().asString(), "{\"message\":\"Operation Successful\",\"httpStatus\":\"OK\"}");
+		Assert.assertEquals(response.getBody().asString(), "Ok!");
 	}
 	
 	
@@ -63,12 +88,25 @@ public class tracingAPIpostTest extends testData {
 			String totalRecordsRemoved,String conflictingFunds,String s3FileSourceLocations,String createdBy,String uploadMethod,
 			String status,String duplicateFunds,String missingIdentifierFunds,String invalidProductIdentifierFunds,String modifiedBy,String traceId) {
 		marlinDBConnection dbCon=new marlinDBConnection();
-		ArrayList<String> result=dbCon.query(tracingFundUniverseQuery+clientId);
-		Assert.assertEquals(result.get(0),clientId+"");
-		Assert.assertEquals(result.get(1),filename+"");
-		Assert.assertEquals(result.get(4),conflictingFunds+"");
+		if(environment.equals("QA")) {
+			dbCon.setQA();
+		}else if(environment.equals("UAT")) {
+			dbCon.setUAT();
+		}else if(environment.equals("PROD")) {
+			
+		}else {
+			System.err.println("Not a valid environment");
+		}
+		
+		ArrayList<String> result=dbCon.query(tracingFundUniverseQuery+clientId+"order by created_date desc");
+		if(scope.equals("REGRESSION")){
+			Assert.assertEquals(result.get(0),clientId+"");
+			Assert.assertEquals(result.get(1),filename+"");
+			Assert.assertEquals(result.get(4),conflictingFunds+"");
+		}
+		//traceID
+		Assert.assertNotEquals( "", result.get(19));
 	}
-	
 	
 	
 
