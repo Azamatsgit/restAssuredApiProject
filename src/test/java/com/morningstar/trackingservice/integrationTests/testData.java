@@ -29,6 +29,16 @@ public class testData {
 		return tracingData;
 	}
 	
+	@DataProvider(name ="tracingAPIOne")
+	public Object[][] tracingAPIOne(){		
+		Object[][] tracingData=Utils.CSVReader(dataenvironment);
+		for(int i=0;i<tracingData.length;i++) {
+			final String uuid1= UUID.randomUUID().toString().replace("-", "");
+			tracingData[i][tracingData[i].length-1]=uuid1;
+		}
+		return tracingData;
+	}
+	
 	public void setData(String environment) {
 		if(environment.equals("UAT"))
 		this.dataenvironment="tracingPostDataUAT.csv";

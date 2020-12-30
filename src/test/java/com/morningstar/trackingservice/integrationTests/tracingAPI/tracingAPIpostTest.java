@@ -17,6 +17,7 @@ import io.restassured.specification.RequestSpecification;
 public class tracingAPIpostTest extends testData {
 	public String environment;
 	public String scope;
+	
 	@Parameters({"environment","scope"})
 	@Test
 	void TestGetResponse(String param,String scope) {
@@ -33,6 +34,27 @@ public class tracingAPIpostTest extends testData {
 		}else {
 			System.err.println("Not a valid environment");
 		}
+		
+		Assert.assertEquals(response.getStatusCode(), 405);
+	}
+	
+	@Parameters({"environment","scope"})
+	@Test
+	void TestGetResponseRegression(String param,String scope) {
+		environment=param;
+		this.scope=scope;
+		Response response = null;
+		if(environment.equals("QA")) {
+			 response= RestAssured.get(uriQA+postMethod);
+			 System.out.println(scope);
+		}else if(environment.equals("UAT")) {
+			 response= RestAssured.get(uriUAT+postMethod);
+		}else if(environment.equals("PROD")) {
+			
+		}else {
+			System.err.println("Not a valid environment");
+		}
+		System.out.println("this is regression");
 		
 		Assert.assertEquals(response.getStatusCode(), 405);
 	}
@@ -83,7 +105,7 @@ public class tracingAPIpostTest extends testData {
 	}
 	
 	
-	@Test(dataProvider = "tracingAPIData")
+	@Test(dataProvider = "tracingAPIOne")
 	void test03DBChecking(String clientId,String clientCode,String filename,String totalRecords,String totalRecordsUpdated,String totalRecordsAdded,
 			String totalRecordsRemoved,String conflictingFunds,String s3FileSourceLocations,String createdBy,String uploadMethod,
 			String status,String duplicateFunds,String missingIdentifierFunds,String invalidProductIdentifierFunds,String modifiedBy,String traceId) {
@@ -92,21 +114,26 @@ public class tracingAPIpostTest extends testData {
 			dbCon.setQA();
 		}else if(environment.equals("UAT")) {
 			dbCon.setUAT();
-		}else if(environment.equals("PROD")) {
+		}else if(environment.equals("PROD")	) {
 			
 		}else {
 			System.err.println("Not a valid environment");
 		}
 		
-		ArrayList<String> result=dbCon.query(tracingFundUniverseQuery+clientId+"order by created_date desc");
-		if(scope.equals("REGRESSION")){
-			Assert.assertEquals(result.get(0),clientId+"");
-			Assert.assertEquals(result.get(1),filename+"");
-			Assert.assertEquals(result.get(4),conflictingFunds+"");
+		ArrayList<String> result=dbCon.query(tracingFundUniverseQuery+clientId+" order by created_date desc");
+		if(scope.equals("REGRESSION")) {
+		Assert.assertEquals(result.get(0),clientId+"");
+		Assert.assertEquals(result.get(1),filename+"");
+		Assert.assertEquals(result.get(4),conflictingFunds+"");
+		System.out.println(result.get(19));
 		}
 		//traceID
 		Assert.assertNotEquals( "", result.get(19));
+		dbCon.query("delete from funduniverse_background_execution_history where trace_id  = '"+result.get(19)+"'");
+
 	}
+	
+	
 	
 	
 

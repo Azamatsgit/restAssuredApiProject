@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="5" passed="4">
+<testng-results skipped="0" failed="0" ignored="1" total="6" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Tracing api" duration-ms="5001" started-at="2020-12-21T21:59:18Z" finished-at="2020-12-21T21:59:23Z">
+  <suite name="Tracing api" duration-ms="7107" started-at="2020-12-30T15:52:26Z" finished-at="2020-12-30T15:52:33Z">
     <groups>
     </groups>
-    <test name="tracingAPIpostTest" duration-ms="5001" started-at="2020-12-21T21:59:18Z" finished-at="2020-12-21T21:59:23Z">
+    <test name="tracingAPIpostTest" duration-ms="7107" started-at="2020-12-30T15:52:26Z" finished-at="2020-12-30T15:52:33Z">
       <class name="com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest">
-        <test-method status="PASS" signature="TestGetResponse(java.lang.String, java.lang.String)[pri:0, instance:com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest@2f7a2457]" name="TestGetResponse" duration-ms="1236" started-at="2020-12-21T16:59:18Z" finished-at="2020-12-21T16:59:19Z">
+        <test-method status="PASS" signature="TestGetResponse(java.lang.String, java.lang.String)[pri:0, instance:com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest@2f7a2457]" name="TestGetResponse" duration-ms="1216" started-at="2020-12-30T10:52:26Z" finished-at="2020-12-30T10:52:27Z">
           <params>
             <param index="0">
               <value>
@@ -16,14 +16,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[REGRESSION]]>
+                <![CDATA[SMOKE]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestGetResponse -->
-        <test-method status="PASS" signature="TestPostExecutionAndResponse(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest@2f7a2457]" name="TestPostExecutionAndResponse" duration-ms="408" started-at="2020-12-21T16:59:19Z" data-provider="tracingAPIData" finished-at="2020-12-21T16:59:19Z">
+        <test-method status="PASS" signature="TestPostExecutionAndResponse(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest@2f7a2457]" name="TestPostExecutionAndResponse" duration-ms="413" started-at="2020-12-30T10:52:27Z" data-provider="tracingAPIData" finished-at="2020-12-30T10:52:27Z">
           <params>
             <param index="0">
               <value>
@@ -107,14 +107,14 @@
             </param>
             <param index="16">
               <value>
-                <![CDATA[00d66fca50384754901e4bddc15d6884]]>
+                <![CDATA[1a09278078eb426a9406f017ae912ed0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestPostExecutionAndResponse -->
-        <test-method status="PASS" signature="TestPostExecutionAndResponse(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest@2f7a2457]" name="TestPostExecutionAndResponse" duration-ms="315" started-at="2020-12-21T16:59:19Z" data-provider="tracingAPIData" finished-at="2020-12-21T16:59:20Z">
+        <test-method status="PASS" signature="TestPostExecutionAndResponse(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest@2f7a2457]" name="TestPostExecutionAndResponse" duration-ms="277" started-at="2020-12-30T10:52:27Z" data-provider="tracingAPIData" finished-at="2020-12-30T10:52:28Z">
           <params>
             <param index="0">
               <value>
@@ -198,14 +198,14 @@
             </param>
             <param index="16">
               <value>
-                <![CDATA[ba8820b605cc4a65b37665a05ab56cb5]]>
+                <![CDATA[5a971ffda4be4561b381190e98ea4ac9]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestPostExecutionAndResponse -->
-        <test-method status="FAIL" signature="test03DBChecking(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest@2f7a2457]" name="test03DBChecking" duration-ms="1688" started-at="2020-12-21T16:59:20Z" data-provider="tracingAPIData" finished-at="2020-12-21T16:59:21Z">
+        <test-method status="PASS" signature="test03DBChecking(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest@2f7a2457]" name="test03DBChecking" duration-ms="2740" started-at="2020-12-30T10:52:28Z" data-provider="tracingAPIOne" finished-at="2020-12-30T10:52:30Z">
           <params>
             <param index="0">
               <value>
@@ -289,64 +289,14 @@
             </param>
             <param index="16">
               <value>
-                <![CDATA[cad51ef2081f4fb4bb6313521e7ec81f]]>
+                <![CDATA[934ebd067dc4446586e7255bd8b679f6]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [[{"clientFundCode":"NLT","secId":"VAUSA0LZ9Z","ticker":"","cusip":"54400A787","products":{"product":[{"productId":"UBS_HancockSig","isOpenNewSales":true}]},"fundName":"Lord Abbett Value Opportunities Fund","isOpen":true,"isOpenNewSales":true},{"clientFundCode":"NLT","secId":"VAUSA0MT6E","ticker":"","cusip":"885216853","products":{"product":[{"productId":"UBS_HancockSig","isOpenNewSales":true}]},"fundName":"Thornburg Limited Term Income Fund","isOpen":true,"isOpenNewSales":true}]] but found [{}]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [[{"clientFundCode":"NLT","secId":"VAUSA0LZ9Z","ticker":"","cusip":"54400A787","products":{"product":[{"productId":"UBS_HancockSig","isOpenNewSales":true}]},"fundName":"Lord Abbett Value Opportunities Fund","isOpen":true,"isOpenNewSales":true},{"clientFundCode":"NLT","secId":"VAUSA0MT6E","ticker":"","cusip":"885216853","products":{"product":[{"productId":"UBS_HancockSig","isOpenNewSales":true}]},"fundName":"Thornburg Limited Term Income Fund","isOpen":true,"isOpenNewSales":true}]] but found [{}]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest.test03DBChecking(tracingAPIpostTest.java:105)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test03DBChecking -->
-        <test-method status="PASS" signature="test03DBChecking(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest@2f7a2457]" name="test03DBChecking" duration-ms="1327" started-at="2020-12-21T16:59:21Z" data-provider="tracingAPIData" finished-at="2020-12-21T16:59:23Z">
+        <test-method status="PASS" signature="test03DBChecking(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest@2f7a2457]" name="test03DBChecking" duration-ms="2436" started-at="2020-12-30T10:52:30Z" data-provider="tracingAPIOne" finished-at="2020-12-30T10:52:33Z">
           <params>
             <param index="0">
               <value>
@@ -430,7 +380,7 @@
             </param>
             <param index="16">
               <value>
-                <![CDATA[a6a2586961ea417597cdc3fc86a6705e]]>
+                <![CDATA[018b0ca7789f4b7fbeaae8f5d4e2771f]]>
               </value>
             </param>
           </params>

@@ -1,14 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 65.197 sec <<< FAILURE!
-test03DBChecking(com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest)  Time elapsed: 1.691 sec  <<< FAILURE!
-java.lang.AssertionError: expected [[{"clientFundCode":"NLT","secId":"VAUSA0LZ9Z","ticker":"","cusip":"54400A787","products":{"product":[{"productId":"UBS_HancockSig","isOpenNewSales":true}]},"fundName":"Lord Abbett Value Opportunities Fund","isOpen":true,"isOpenNewSales":true},{"clientFundCode":"NLT","secId":"VAUSA0MT6E","ticker":"","cusip":"885216853","products":{"product":[{"productId":"UBS_HancockSig","isOpenNewSales":true}]},"fundName":"Thornburg Limited Term Income Fund","isOpen":true,"isOpenNewSales":true}]] but found [{}]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest.test03DBChecking(tracingAPIpostTest.java:105)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 67.31 sec
