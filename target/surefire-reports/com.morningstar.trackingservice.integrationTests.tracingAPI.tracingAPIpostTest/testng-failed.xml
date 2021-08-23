@@ -5,7 +5,7 @@
     <classes>
       <class name="com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest">
         <methods>
-          <include name="test03DBChecking" invocation-numbers="0 1"/>
+          <include name="TestGetResponseRegression"/>
           <include name="TestGetResponse"/>
           <include name="TestPostExecutionAndResponse" invocation-numbers="0 1"/>
         </methods>
