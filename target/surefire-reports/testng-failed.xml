@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Tracing api]">
-  <parameter name="environment" value="QA"/>
-  <parameter name="scope" value="REGRESSION"/>
-  <test name="tracingAPIpostTest(failed)">
+<suite verbose="0" name="Failed suite [com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest]">
+  <test name="Command line test(failed)">
     <classes>
       <class name="com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest">
         <methods>
-          <include name="test03DBChecking" invocation-numbers="0"/>
+          <include name="TestGetResponseRegression"/>
+          <include name="TestGetResponse"/>
+          <include name="TestPostExecutionAndResponse" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest -->
     </classes>
-  </test> <!-- tracingAPIpostTest(failed) -->
-</suite> <!-- Failed suite [Tracing api] -->
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest] -->
