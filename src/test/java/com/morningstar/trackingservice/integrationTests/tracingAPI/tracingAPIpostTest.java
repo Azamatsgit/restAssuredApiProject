@@ -76,7 +76,7 @@ public class tracingAPIpostTest extends testData {
 		request.put("totalRecordsAdded", Integer.parseInt(totalRecordsAdded));
 		request.put("totalRecordsRemoved", Integer.parseInt(totalRecordsRemoved));
 		request.put("conflictingFunds", conflictingFunds);
-		request.put("s3FileSourceLocations", s3FileSourceLocations);
+		request.put("s3FileSourceLocations", new s3FileSourceLocations());
 		request.put("createdBy", createdBy);
 		request.put("uploadMethod", uploadMethod);
 		request.put("status", status);
@@ -105,34 +105,34 @@ public class tracingAPIpostTest extends testData {
 	}
 	
 	
-//	@Test(dataProvider = "tracingAPIOne")
-//	void test03DBChecking(String clientId,String clientCode,String filename,String totalRecords,String totalRecordsUpdated,String totalRecordsAdded,
-//			String totalRecordsRemoved,String conflictingFunds,String s3FileSourceLocations,String createdBy,String uploadMethod,
-//			String status,String duplicateFunds,String missingIdentifierFunds,String invalidProductIdentifierFunds,String modifiedBy,String traceId) {
-//		marlinDBConnection dbCon=new marlinDBConnection();
-//		if(environment.equals("QA")) {
-//			dbCon.setQA();
-//		}else if(environment.equals("UAT")) {
-//			dbCon.setUAT();
-//		}else if(environment.equals("PROD")	) {
-//
-//		}else {
-//			System.err.println("Not a valid environment");
-//		}
-//
-//		ArrayList<String> result=dbCon.query(tracingFundUniverseQuery+clientId+" order by created_date desc");
-//		if(scope.equals("REGRESSION")) {
-//		Assert.assertEquals(result.get(0),clientId+"");
-//		Assert.assertEquals(result.get(1),filename+"");
-//		Assert.assertEquals(result.get(4),conflictingFunds+"");
-//		System.out.println(result.get(19));
-//		}
-//		//traceID
-//		Assert.assertNotEquals( "", result.get(19));
-//		dbCon.query("delete from funduniverse_background_execution_history where trace_id  = '"+result.get(19)+"'");
-//
-//	}
-//
+	@Test(dataProvider = "tracingAPIOne")
+	void test03DBChecking(String clientId,String clientCode,String filename,String totalRecords,String totalRecordsUpdated,String totalRecordsAdded,
+			String totalRecordsRemoved,String conflictingFunds,String s3FileSourceLocations,String createdBy,String uploadMethod,
+			String status,String duplicateFunds,String missingIdentifierFunds,String invalidProductIdentifierFunds,String modifiedBy,String traceId) {
+		marlinDBConnection dbCon=new marlinDBConnection();
+		if(environment.equals("QA")) {
+			dbCon.setQA();
+		}else if(environment.equals("UAT")) {
+			dbCon.setUAT();
+		}else if(environment.equals("PROD")	) {
+
+		}else {
+			System.err.println("Not a valid environment");
+		}
+
+		ArrayList<String> result=dbCon.query(tracingFundUniverseQuery+clientId+" order by created_date desc");
+		if(scope.equals("REGRESSION")) {
+		Assert.assertEquals(result.get(0),clientId+"");
+		Assert.assertEquals(result.get(1),filename+"");
+		Assert.assertEquals(result.get(4),conflictingFunds+"");
+		System.out.println(result.get(19));
+		}
+		//traceID
+		Assert.assertNotEquals( "", result.get(19));
+		dbCon.query("delete from funduniverse_background_execution_history where trace_id  = '"+result.get(19)+"'");
+
+	}
+
 	
 	
 	
