@@ -68,6 +68,7 @@ public class tracingAPIpostTest extends testData {
 			String status,String duplicateFunds,String missingIdentifierFunds,String invalidProductIdentifierFunds,String modifiedBy,String traceId){
 		
 		JSONObject request=new JSONObject();
+		S3FileSourceLocations locations = null;
 		request.put("clientId", Integer.parseInt(clientId));
 		request.put("clientCode", clientCode);
 		request.put("filename", filename);
@@ -75,14 +76,10 @@ public class tracingAPIpostTest extends testData {
 		request.put("totalRecordsUpdated", Integer.parseInt(totalRecordsUpdated));
 		request.put("totalRecordsAdded", Integer.parseInt(totalRecordsAdded));
 		request.put("totalRecordsRemoved", Integer.parseInt(totalRecordsRemoved));
-		request.put("conflictingFunds", conflictingFunds);
-		request.put("s3FileSourceLocations", new s3FileSourceLocations());
+		request.put("s3FileSourceLocations", locations);
 		request.put("createdBy", createdBy);
 		request.put("uploadMethod", uploadMethod);
 		request.put("status", status);
-		request.put("duplicateFunds", duplicateFunds);
-		request.put("missingIdentifierFunds", missingIdentifierFunds);
-		request.put("invalidProductIdentifierFunds", invalidProductIdentifierFunds);
 		request.put("modifiedBy", modifiedBy);
 		if(environment.equals("QA")) {
 			RestAssured.baseURI=uriQA;
@@ -99,6 +96,7 @@ public class tracingAPIpostTest extends testData {
 		requestPOST.header("X-B3-TraceId",traceId);
 		requestPOST.header("X-APP-NAME","Fund Universe");
 		requestPOST.body(request.toJSONString());
+		String temp = request.toJSONString();
 		Response response = requestPOST.post(postMethod);
 		Assert.assertEquals(response.getStatusCode(), 200);
 		Assert.assertEquals(response.getBody().asString(), "Ok!");
@@ -121,10 +119,9 @@ public class tracingAPIpostTest extends testData {
 		}
 
 		ArrayList<String> result=dbCon.query(tracingFundUniverseQuery+clientId+" order by created_date desc");
-		if(scope.equals("REGRESSION")) {
+		if(scope.equals("SMOKE")) {
 		Assert.assertEquals(result.get(0),clientId+"");
 		Assert.assertEquals(result.get(1),filename+"");
-		Assert.assertEquals(result.get(4),conflictingFunds+"");
 		System.out.println(result.get(19));
 		}
 		//traceID
@@ -132,9 +129,5 @@ public class tracingAPIpostTest extends testData {
 		dbCon.query("delete from funduniverse_background_execution_history where trace_id  = '"+result.get(19)+"'");
 
 	}
-
-	
-	
-	
 
 }

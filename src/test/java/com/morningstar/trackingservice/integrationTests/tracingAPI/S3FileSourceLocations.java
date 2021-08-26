@@ -1,6 +1,6 @@
 package com.morningstar.trackingservice.integrationTests.tracingAPI;
 
-public class s3FileSourceLocations {
+public class S3FileSourceLocations {
 
 
         private String bucket;
