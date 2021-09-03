@@ -14,6 +14,7 @@ public class testData {
 	
 	protected String uriQA=testData.getProperty("uri");
 	protected String uriUAT=testData.getProperty("uriUAT");
+	protected String uriPROD=testData.getProperty("uriPROD");
 	protected String postMethod=testData.getProperty("postMethod");
 	private String dataenvironment="tracingPostData.csv";
 	
@@ -40,8 +41,15 @@ public class testData {
 	}
 	
 	public void setData(String environment) {
-		if(environment.equals("UAT"))
-		this.dataenvironment="tracingPostDataUAT.csv";
+		if (environment.equals("UAT") )
+		{
+			this.dataenvironment = "tracingPostDataUAT.csv";
+		}
+		else if (environment.equals("PROD"))
+	{
+		this.dataenvironment = "tracingPostDataUAT.csv";
+
+		}
+
 	}
-	
 }

@@ -30,7 +30,7 @@ public class tracingAPIpostTest extends testData {
 		}else if(environment.equals("UAT")) {
 			 response= RestAssured.get(uriUAT+postMethod);
 		}else if(environment.equals("PROD")) {
-			
+			response= RestAssured.get(uriPROD+postMethod);
 		}else {
 			System.err.println("Not a valid environment");
 		}
@@ -86,7 +86,7 @@ public class tracingAPIpostTest extends testData {
 		}else if(environment.equals("UAT")) {
 			RestAssured.baseURI=uriUAT;
 		}else if(environment.equals("PROD")) {
-			
+			RestAssured.baseURI=uriPROD;
 		}else {
 			System.err.println("Not a valid environment");
 		}
@@ -113,7 +113,7 @@ public class tracingAPIpostTest extends testData {
 		}else if(environment.equals("UAT")) {
 			dbCon.setUAT();
 		}else if(environment.equals("PROD")	) {
-
+			dbCon.setPROD();
 		}else {
 			System.err.println("Not a valid environment");
 		}
