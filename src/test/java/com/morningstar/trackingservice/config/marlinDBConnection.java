@@ -36,6 +36,13 @@ public class marlinDBConnection {
 		 user=dbConnection.getProperty("userUAT");
 		 password=dbConnection.getProperty("passwordUAT");
 	}
+
+	public void setPROD() {
+
+		url = dbConnection.getProperty("urlPROD");
+		user=dbConnection.getProperty("userPROD");
+		password=dbConnection.getProperty("passwordPROD");
+	}
 	
 	public ArrayList<String> query(String query) {
 		ArrayList<String> arreglo=new ArrayList<String>();
