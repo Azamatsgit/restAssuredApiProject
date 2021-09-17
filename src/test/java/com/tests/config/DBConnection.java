@@ -1,4 +1,4 @@
-package com.morningstar.trackingservice.config;
+package com.tests.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,10 +8,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Properties;
 
-import com.morningstar.trackingservice.utils.Utils;
+import com.tests.utils.Utils;
 
 
-public class marlinDBConnection {
+public class DBConnection {
 	
 	Properties dbConnection;
 	Connection conn=null;
@@ -19,8 +19,8 @@ public class marlinDBConnection {
 	String user;
 	String password;
 	
-	public marlinDBConnection() {
-		dbConnection=Utils.loadProperties("DBConnection.properties");
+	public DBConnection() {
+		dbConnection= Utils.loadProperties("DBConnection.properties");
 	}
 	
 	public void setQA() {
@@ -30,19 +30,7 @@ public class marlinDBConnection {
 		 password=dbConnection.getProperty("password");
 	}
 	
-	public void setUAT() {
-		
-		 url = dbConnection.getProperty("urlUAT");
-		 user=dbConnection.getProperty("userUAT");
-		 password=dbConnection.getProperty("passwordUAT");
-	}
 
-	public void setPROD() {
-
-		url = dbConnection.getProperty("urlPROD");
-		user=dbConnection.getProperty("userPROD");
-		password=dbConnection.getProperty("passwordPROD");
-	}
 	
 	public ArrayList<String> query(String query) {
 		ArrayList<String> arreglo=new ArrayList<String>();

@@ -4,7 +4,7 @@
 <parameter name="scope" value="REGRESSION" />
    <test name = "tracingAPIpostTest">
       <classes>
-         <class name = "com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest" >
+         <class name = "" >
          	<methods>
                 <include name="TestGetResponse" />
                 <include name="TestPostExecutionAndResponse" />

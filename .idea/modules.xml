@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/tracingAPI.iml" filepath="$PROJECT_DIR$/tracingAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ApiTesting.iml" filepath="$PROJECT_DIR$/ApiTesting.iml" />
     </modules>
   </component>
 </project>

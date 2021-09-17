@@ -1,4 +1,4 @@
-package com.morningstar.trackingservice.utils;
+package com.tests.utils;
 
 import java.io.FileInputStream;
 import java.io.FileReader;

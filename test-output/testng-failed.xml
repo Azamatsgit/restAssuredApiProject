@@ -5,11 +5,11 @@
   <parameter name="scope" value="SMOKE"/>
   <test thread-count="5" name="tracingAPIpostTest(failed)">
     <classes>
-      <class name="com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest">
+      <class name="tracingAPIpostTest">
         <methods>
           <include name="test03DBChecking" invocation-numbers="1"/>
         </methods>
-      </class> <!-- com.morningstar.trackingservice.integrationTests.tracingAPI.tracingAPIpostTest -->
+      </class> <!-- tracingAPIpostTest -->
     </classes>
   </test> <!-- tracingAPIpostTest(failed) -->
 </suite> <!-- Failed suite [Tracing api] -->
